@@ -1,3 +1,3 @@
 # Test Driven Design - Examples
 
-Similar TDD examples form "TDD by example" by Kent Beck.
+Similar TDD examples from "TDD by example" by Kent Beck.
