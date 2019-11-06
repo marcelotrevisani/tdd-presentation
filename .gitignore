@@ -50,6 +50,9 @@ Thumbs.db
 #Pycharm
 .idea
 
+# pytest
+.pytest_cache
+
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -98,3 +101,4 @@ Cargo.lock
 *.exe
 *.out
 *.app
+pytdd/tests/.pytest_cache/
