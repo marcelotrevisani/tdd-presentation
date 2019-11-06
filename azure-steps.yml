@@ -1,0 +1,23 @@
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)'
+      architecture: 'x64'
+
+  # Conda Environment
+  # Create and activate a Conda environment.
+  - task: CondaEnvironment@1
+    inputs:
+      packageSpecs: 'python=$(python.version) $(deps.space)'
+      installOptions: '--strict-channel-priority -c conda-forge'
+      updateConda: true
+    displayName: 'Conda Environment (conda-forge)'
+  - script: |
+      pytest -v tdd-py/tests --cov tdd-py --cov-report xml --cov-append tdd-py/tests --junitxml=junit/test-results.xml -n auto
+    displayName: 'Tests'
+
+  # Publish build results
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/test-*.xml'
+      testRunTitle: 'Publish test results for Python $(python.version)'
