@@ -1,6 +1,6 @@
 class Dollar():
     def __init__(self, value):
-        pass
+        self._value = value
 
     def add(self, value):
-        return 12
+        return self._value + value
