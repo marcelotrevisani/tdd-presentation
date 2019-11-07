@@ -7,7 +7,7 @@ def test_dollar_add():
 
 
 def test_get_value():
-    assert Dollar(5).get_value() == 5
+    assert Dollar(5).value == 5
 
 
 def test_equal():
