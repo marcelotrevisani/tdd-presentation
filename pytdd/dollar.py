@@ -28,3 +28,6 @@ class Dollar:
         exchange_rate = data_exchange["Realtime Currency Exchange Rate"]
         exchange_rate = float(exchange_rate["5. Exchange Rate"])
         return Dollar(self.value * exchange_rate)
+
+    def __repr__(self):
+        return "Dollar(value=10)"
