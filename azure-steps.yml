@@ -13,7 +13,7 @@ steps:
       updateConda: true
     displayName: 'Conda Environment (conda-forge)'
   - script: |
-      pytest -v tdd-py/tests --cov tdd-py --cov-report xml --cov-append tdd-py/tests --junitxml=junit/test-results.xml -n auto
+      pytest -v pytdd/tests --cov pytdd --cov-report xml --junitxml=junit/test-results.xml
     displayName: 'Tests'
 
   # Publish build results

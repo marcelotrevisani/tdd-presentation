@@ -1,5 +1,5 @@
 variables:
-  deps.space: 'pytest pytest-cov pytest-xdist pytest-mock pytest-azurepipelines dataclasses'
+  deps.space: 'pytest pytest-cov pytest-mock pytest-azurepipelines dataclasses'
 
 jobs:
 - job: windows
