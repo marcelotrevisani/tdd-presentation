@@ -12,3 +12,7 @@ def test_get_value():
 def test_equal():
     assert Dollar(1) == Dollar(1)
     assert Dollar(1) != Dollar(2)
+
+
+def test_convert_pound():
+    assert Dollar(10).convert_to_pound() == Dollar(7.77)
