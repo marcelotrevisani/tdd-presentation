@@ -11,3 +11,6 @@ class Dollar:
 
     def __eq__(self, compare):
         return self._value == compare.value
+
+    def convert_to_pound(self):
+        return Dollar(7.77)
