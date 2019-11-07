@@ -28,3 +28,7 @@ def mock_requests_get(url):
 class MockResponse:
     def json(self):
         return {"Realtime Currency Exchange Rate": {"5. Exchange Rate": "0.5"}}
+
+
+def test_dollar_repr():
+    assert str(Dollar(10)) == "Dollar(value=10)"
