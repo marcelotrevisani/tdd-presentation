@@ -1,3 +1,5 @@
+import requests
+
 from pytdd.dollar import Dollar
 
 
@@ -12,3 +14,17 @@ def test_get_value():
 def test_equal():
     assert Dollar(1) == Dollar(1)
     assert Dollar(1) != Dollar(2)
+
+
+def test_convert_pound(monkeypatch):
+    monkeypatch.setattr(requests, "get", mock_requests_get)
+    assert Dollar(10).convert_to_pound() == Dollar(5)
+
+
+def mock_requests_get(url):
+    return MockResponse()
+
+
+class MockResponse:
+    def json(self):
+        return {"Realtime Currency Exchange Rate": {"5. Exchange Rate": "0.5"}}
