@@ -3,7 +3,7 @@ from pytdd.dollar import Dollar
 
 def test_dollar_add():
     num = Dollar(10)
-    assert num.add(2).equal(Dollar(12))
+    assert num.add(2) == Dollar(12)
 
 
 def test_get_value():
@@ -11,5 +11,5 @@ def test_get_value():
 
 
 def test_equal():
-    assert Dollar(1).equal(Dollar(1))
-    assert not Dollar(1).equal(Dollar(2))
+    assert Dollar(1) == Dollar(1)
+    assert Dollar(1) != Dollar(2)
