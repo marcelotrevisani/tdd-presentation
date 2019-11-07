@@ -2,8 +2,7 @@ from pytdd.dollar import Dollar
 
 
 def test_dollar_add():
-    num = Dollar(10)
-    assert num.add(2) == Dollar(12)
+    assert Dollar(10) + Dollar(2) == Dollar(12)
 
 
 def test_get_value():
