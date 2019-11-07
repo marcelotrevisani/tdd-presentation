@@ -30,4 +30,4 @@ class Dollar:
         return Dollar(self.value * exchange_rate)
 
     def __repr__(self):
-        return "Dollar(value=10)"
+        return f"Dollar(value={self._value})"
