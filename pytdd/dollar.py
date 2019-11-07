@@ -2,8 +2,8 @@ class Dollar():
     def __init__(self, value):
         self._value = value
 
-    def add(self, value):
-        return Dollar(self._value + value)
+    def __add__(self, dollar_add):
+        return Dollar(self._value + dollar_add.value)
 
     @property
     def value(self):
