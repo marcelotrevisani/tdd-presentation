@@ -4,3 +4,6 @@ class Dollar():
 
     def add(self, value):
         return Dollar(self._value + value)
+
+    def get_value(self):
+        return self._value
